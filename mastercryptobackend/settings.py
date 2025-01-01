@@ -60,9 +60,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", # Replace with the origin of your frontend application
-    # Add other allowed origins as needed
+    "http://localhost:3000",  # For local development
+    "https://6774d507b0b77418f9820681--mastercryptoet.netlify.app",  # Your deployed frontend
 ]
+
 
 CORS_ALLOW_METHODS = [
     "GET",
