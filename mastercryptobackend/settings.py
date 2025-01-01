@@ -62,7 +62,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # For local development
     "https://6774d507b0b77418f9820681--mastercryptoet.netlify.app",  # Your deployed frontend,
-    'https://mastercryptoet.netlify.app'
+    "https://mastercryptoet.netlify.app",  # Fixed missing comma
     "https://mastercrypto.onrender.com",
 ]
 
@@ -73,8 +73,9 @@ CORS_ALLOW_METHODS = [
     "PUT",
     "PATCH",
     "DELETE",
-    "OPTIONS"  # Important for preflight requests
 ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_HEADERS = [
     "accept",
@@ -87,6 +88,8 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+CORS_ALLOW_ALL_ORIGINS = True
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
